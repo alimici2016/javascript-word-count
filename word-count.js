@@ -5,7 +5,8 @@
 
 export const countWords = (phrase) => {
   //This first few lines are to make the inputs an array, and uniform
-
+   //create an empty array to append to
+   let wordArray = [];
   //replace tabs and new spaces in the phrase provided
   const editedPhrase = phrase.replace(/[\n\t]/g, " ");
   //convert to lowercase
@@ -44,6 +45,8 @@ export const countWords = (phrase) => {
         phraseObj[phraseArray[i]] = count;
       }
     }
+    //push these objects to the back of the wordArray
+    wordArray.push(phraseObj);
   }
 
   throw new Error('Remove this statement and implement this function');
