@@ -8,9 +8,9 @@ export const countWords = (phrase) => {
   //replace tabs and new spaces in the phrase provided
   const editedPhrase = phrase.replace(/[\n\t]/g, " ");
   //convert to lowercase
-  const toLowerCase = editedPhrase.toLowerCase();
+  const phraseToLowerCase = editedPhrase.toLowerCase();
   //find certain oddities in string and join them to create substrings accordingly
-  let phraseArray = toLowerCase
+  let phraseArray = phraseToLowerCase
     .split(",")
     .join("")
     .split('"')
